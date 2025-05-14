@@ -22,62 +22,65 @@ A Python data analysis project that processes and visualizes global COVID-19 tre
    ```bash
    git clone [your-repository-url]
    cd covid-data-tracker
-Set up Python environment
+   
+2. **Set up Python environment**
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   pip install pandas matplotlib seaborn plotly
+   
+3. **Download the dataset**
 
-bash
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-pip install pandas matplotlib seaborn plotly
-Download the dataset
+   Manually download owid-covid-data.csv
 
-Manually download owid-covid-data.csv
+   Place it in a data folder in your project directory
 
-Place it in a data folder in your project directory
+4. **Run the analysis**
 
-Run the analysis
-
-bash
-python analysis.py
-Expected Outputs
+   ```bash
+   python analysis.py
+   
+**Expected Outputs**
 When you run the analysis script, it will:
 
-Create an output folder automatically
+- Create an output folder automatically
 
-Generate these files:
+- Generate these files:
 
-time_series.png: Comparative charts of cases/deaths
+      time_series.png: Comparative charts of cases/deaths
 
-vaccination.png: Vaccination progress charts
+      vaccination.png: Vaccination progress charts
 
-choropleth.html: Interactive world map (open in browser)
+      choropleth.html: Interactive world map (open in browser)
 
-Key Insights from Analysis
-Case Trajectories: Countries show different pandemic wave patterns based on government responses and variants.
+**Key Insights from Analysis**
+1. Case Trajectories: Countries show different pandemic wave patterns based on government responses and variants.
 
-Vaccination Gaps: Clear disparities visible between developed and developing nations in vaccination rates.
+2. Vaccination Gaps: Clear disparities visible between developed and developing nations in vaccination rates.
 
-Data Challenges:
+3. Data Challenges:
 
-Missing early vaccination data for some countries
+      Missing early vaccination data for some countries
 
-Need for careful handling of case/death ratios with small numbers
+      Need for careful handling of case/death ratios with small numbers
 
-Customization Options
+**Customization Options**
+
 You can modify these aspects in analysis.py:
 
-Change target countries in the countries list
+  - Change target countries in the countries list
 
-Adjust date ranges by filtering the DataFrame
+  - Adjust date ranges by filtering the DataFrame
 
-Modify visualization styles in the plotting functions
+  - Modify visualization styles in the plotting functions
 
-Troubleshooting
+**Troubleshooting**
 If you get file not found errors:
 
-Verify the CSV is in data/owid-covid-data.csv
+  - Verify the CSV is in data/owid-covid-data.csv
 
-Check the working directory in VS Code
+  - Check the working directory in VS Code
 
 For Plotly errors:
 
-Ensure you have the latest version: pip install --upgrade plotly
+  - Ensure you have the latest version: pip install --upgrade plotly
